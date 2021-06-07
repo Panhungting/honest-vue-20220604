@@ -17,8 +17,8 @@
 <script>
 import HonestHeader from "../../components/HonestHeader";
 import HonestFooter from "../../components/HonestFooter";
-import DetailsBanner from "../../components/DetailsContainerBanner";
-import DetailsContent from "../../components/DetailsContainerContent";
+import DetailsBanner from "../../components/DetailsBanner";
+import DetailsContent from "../../components/DetailsContent";
 export default {
   components: {
     HonestHeader,

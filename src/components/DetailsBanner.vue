@@ -52,7 +52,7 @@ h1 {
 </style>
 <script>
 export default {
-  name: "DetailsContainerBanner",
+  name: "DetailsBanner",
   data() {
     return {
       currentItem: "",
