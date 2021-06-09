@@ -77,18 +77,10 @@ export default {
       ],
     };
   },
-  created() {
-    // this.getParams();
-  },
   computed: {
     currentNav() {
       return this.$store.state.navIndex - 1;
     }
   },
-  watch: {
-    // "this.$store.state.navIndex" () {
-    //   this.currentNav = this.$store.getters.navIndex
-    // }
-  }
 };
 </script>

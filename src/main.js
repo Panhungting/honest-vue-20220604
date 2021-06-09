@@ -14,24 +14,10 @@ Vue.use(Element)
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 
-import { mapState } from 'vuex'
-
 new Vue({
   el: '#app',
   router,
   store,
   components: { App },
   template: '<App/>',
-  // computed: mapState({
-  //   // 箭头函数可使代码更简练
-  //   navIndex: state => state.navIndex,
-
-  //   // 传字符串参数 'navIndex' 等同于 `state => state.navIndex`
-  //   navIndexAlias: 'navIndex',
-
-  //   // 为了能够使用 `this` 获取局部状态，必须使用常规函数
-  //   getNavIndex (state) {
-  //     return state.navIndex
-  //   }
-  // })
 })

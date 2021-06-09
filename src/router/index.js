@@ -3,7 +3,6 @@ import Router from 'vue-router'
 
 import Index from '../views/temIndex.vue'  // 临时主页
 import HonestInfo from '../views/siteReception/HonestInfo.vue'
-// import Details from '../views/siteReception/DetailsContainer.vue'
 
 import BgLogin from '../views/websiteBackground/BgLogin.vue'
 import BgIndex from '../views/websiteBackground/BgIndex.vue'
@@ -17,18 +16,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',  
+      name: 'Index',  
       component: Index
     },
     // 后台
     {
       path: '/honest/login',
-      name: 'bgLogin',
+      name: 'BgLogin',
       component: BgLogin
     },
     {
       path: '/honest',
-      name: 'bgIndex',
+      name: 'BgIndex',
       component: BgIndex,
       // meta: {
       //   requireAuth: true   //需要登录后才能访问的受限资源
@@ -36,7 +35,7 @@ export default new Router({
     },
     {
       path: '/honest/employee',
-      name: 'bgEmployee',
+      name: 'BgEmployee',
       component: BgEmployee,
       // meta: {
       //   requireAuth: true
