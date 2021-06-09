@@ -41,7 +41,7 @@
 </style>
 
 <script>
-import BgAside from './../../components/BgAside'
+import BgAside from './../../components/honestBg/BgAside'
 export default {
   name: 'BgIndex',
   components: {

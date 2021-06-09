@@ -5,22 +5,21 @@
       :default-active="navActiveIndex"
       class="el-menu-demo main-menu"
       mode="horizontal"
-      @select="handleSelect"
       active-text-color="#ffd04b"
     >
       <el-menu-item index="1">
-        <router-link :to="{ name: 'honestIndex' }">ホーム</router-link>
+        <router-link :to="{ name: 'HonestInfo', params: { item: 0 } }">ホーム</router-link>
       </el-menu-item>
       <el-submenu index="2">
         <template slot="title">会社案内</template>
-        <router-link :to="{ name: 'company', params: { item: 0 } }">
+        <router-link :to="{ name: 'Company', params: { item: 1 } }">
           <el-menu-item index="2-1">会社概要</el-menu-item>
         </router-link>
         <el-menu-item index="2-2">选项2</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">事業内容</template>
-        <router-link :to="{ name: 'service', params: { item: 1 } }">
+        <router-link :to="{ name: 'Service', params: { item: 2 } }">
           <el-menu-item index="3-1">事業内容</el-menu-item>
         </router-link>
         <el-menu-item index="3-2">选项2</el-menu-item>
@@ -68,15 +67,9 @@ export default {
     };
   },
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key+"----"+keyPath);
-      // this.navActiveIndex = key;
-    }
+    // handleSelect(key, keyPath) {
+    //   console.log(key+"----"+keyPath);
+    // }
   },
-  watch: {
-    navActiveIndex() {
-      console.log(this.navActiveIndex);
-    }
-  }
 };
 </script>
