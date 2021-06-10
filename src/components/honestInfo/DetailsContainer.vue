@@ -1,20 +1,16 @@
 <template>
-  <div style="height:100%">
-    <el-main>
-      <details-banner></details-banner>
-      <details-content></details-content>
-    </el-main>
+  <div style="height: 100%">
+    <details-banner></details-banner>
+    <details-content></details-content>
   </div>
 </template>
 <script>
 import DetailsBanner from "./DetailsBanner";
 import DetailsContent from "./DetailsContent";
 export default {
-  name: 'DetailsContainer',
+  name: "DetailsContainer",
   data() {
-    return {
-      
-      }
+    return {};
   },
   components: {
     DetailsBanner,

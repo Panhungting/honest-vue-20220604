@@ -64,8 +64,6 @@ el-carousel {
   font-size: 18px;
   text-align: left;
   border: 2px solid red;
-  /* border-radius: 2px; */
-  /* box-shadow: 0 2px 12px 0 rgba(243, 18, 18, 0.801) */
 }
 .elcollapse {
   text-align: left;

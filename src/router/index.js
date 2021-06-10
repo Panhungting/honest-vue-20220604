@@ -16,18 +16,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',  
+      name: 'Index',  
       component: Index
     },
     // 后台
     {
       path: '/honest/login',
-      name: 'bgLogin',
+      name: 'BgLogin',
       component: BgLogin
     },
     {
       path: '/honest',
-      name: 'bgIndex',
+      name: 'BgIndex',
       component: BgIndex,
       // meta: {
       //   requireAuth: true   //需要登录后才能访问的受限资源
@@ -35,7 +35,7 @@ export default new Router({
     },
     {
       path: '/honest/employee',
-      name: 'bgEmployee',
+      name: 'BgEmployee',
       component: BgEmployee,
       // meta: {
       //   requireAuth: true

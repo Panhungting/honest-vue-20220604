@@ -17,7 +17,7 @@
             </el-table-column>
             <el-table-column prop="" label="操作" width="120px">
               <!-- <template> -->
-                <router-link :to="{name:'employee'}">
+                <router-link :to="{name:'BgEmployee'}">
                   <el-button type="text" size="small">编辑</el-button>
                 </router-link>
                 <el-button @click="delE" type="text" size="small" style="margin-left:10px">delete</el-button>
