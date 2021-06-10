@@ -8,6 +8,39 @@
 <script>
 export default {
   name: "App",
+  created() {
+    this.getCurrentPath();
+  },
+  watch: {
+    $route() {
+      this.getCurrentPath();
+    },
+  },
+  methods: {
+    getCurrentPath() {
+      console.log (this.$route.path);
+      this.setNavIndex(this.$route.path);
+    },
+    setNavIndex(currentPath) {
+      switch (currentPath) {
+        case "/honestInfo":
+          this.$store.commit('newNavIndex', 0);
+          break;
+        case "/company":
+          this.$store.commit('newNavIndex', 1);
+          // this.$store.state.navIndex = 1;
+          break;
+          case "/service":
+          this.$store.commit('newNavIndex', 2);
+          // this.$store.state.navIndex = 2;
+          break;
+        default:
+          this.$store.commit('newNavIndex', 0);
+          // this.$store.state.navIndex = 0;
+      }
+    },
+
+  },
 };
 </script>
 
@@ -29,3 +62,4 @@ a {
 }
 ::-webkit-scrollbar {display:none}
 </style>
+

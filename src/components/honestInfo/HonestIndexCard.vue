@@ -9,7 +9,7 @@
       </div>
       <div class="card-nav">
         <p>会社概要</p>
-        <router-link :to="{ name: 'company', params: { item: 0 } }">
+        <router-link :to="{ name: 'Company' }">
           <p class="link">詳細を確認する</p>
         </router-link>
       </div>

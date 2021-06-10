@@ -2,8 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Index from '../views/temIndex.vue'  // 临时主页
-import HonestIndex from '../views/siteReception/HonestIndex.vue'
-import Details from '../views/siteReception/DetailsContainer.vue'
+import HonestInfo from '../views/siteReception/HonestInfo.vue'
 
 import BgLogin from '../views/websiteBackground/BgLogin.vue'
 import BgIndex from '../views/websiteBackground/BgIndex.vue'
@@ -44,19 +43,19 @@ export default new Router({
     },
     // 前台
     {
-      path: '/honestindex',
-      name: 'honestIndex',
-      component: HonestIndex
+      path: '/honestInfo',
+      name: 'HonestInfo',
+      component: HonestInfo
     },
     {
       path: '/company',
-      name: 'company',
-      component: Details
+      name: 'Company',
+      component: HonestInfo
     },
     {
       path: '/service',
-      name: 'service',
-      component: Details
+      name: 'Service',
+      component: HonestInfo
     },
   ]
 })
