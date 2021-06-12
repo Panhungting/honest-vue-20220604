@@ -8,6 +8,9 @@ import BgLogin from '../views/websiteBackground/BgLogin.vue'
 import BgIndex from '../views/websiteBackground/BgIndex.vue'
 import BgEmployee from '../views/websiteBackground/BgEmployee.vue'
 
+//テストページ 下path name component 設定
+//次はsrc\views\panReception\PanIndex.vue
+import PanIndex from '../views/panReception/PanIndex.vue'
 
 Vue.use(Router)
 
@@ -57,5 +60,11 @@ export default new Router({
       name: 'Service',
       component: HonestInfo
     },
+    // PanIndex
+    {
+      path: '/panIndex',
+      name: 'PanIndex',
+      component: PanIndex
+    }
   ]
 })
