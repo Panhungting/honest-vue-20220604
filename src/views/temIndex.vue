@@ -8,7 +8,7 @@
     </span>
     <!-- 入口  次は src\router\index.js-->
     <span style="margin-right:50px">go to
-      <router-link :to="{name:'PanIndex'}"> {{PanIndex}} </router-link>
+      <router-link :to="{name:'PanInfo'}"> {{PanInfo}} </router-link>
     </span>
   </div>
 </template>
@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       index: "honestInfo",
-      PanIndex: "PanIndex"
+      PanInfo: "PanInfo"
     }
   },
 }

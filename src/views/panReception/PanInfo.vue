@@ -5,10 +5,10 @@
         <pan-header></pan-header>
       </el-header>
       <el-main>
-        <honest-index v-if="this.$store.state.navIndex === 0"></honest-index>
+        <pan-index v-if="this.$store.state.navIndex === 0"></pan-index>
         <details-container v-else></details-container>
         <!--
-        <pan-index v-if="this.$store.state.navIndex === 0"></pan-index>
+        <honest-index v-if="this.$store.state.navIndex === 0"></honest-index>
         <details-container v-else></details-container>
          -->
       </el-main>
@@ -20,19 +20,14 @@
 </template>
 
 <script>
-import HonestHeader from "../../components/HonestHeader";
-import HonestFooter from "../../components/HonestFooter";
-import HonestIndex from "../../components/honestInfo/HonestIndexContainer";
-import DetailsContainer from "../../components/honestInfo/DetailsContainer"
-
 import PanHeader from        "../../components/PanHeader";
-import PanIndex from         "../../components/panInfo/PanIndexContainer";
+import PanIndex from         "../../components/panInfo/index/PanIndexContainer";
 
-import PanIndexAbove from "../../components/panInfo/PanIndexAbove";
-import PanIndexUnder from "../../components/panInfo/PanIndexUnder";
+import PanIndexAbove from "../../components/panInfo/index/PanIndexAbove";
+import PanIndexUnder from "../../components/panInfo/index/PanIndexUnder";
 
 export default {
-  name: "PanIndex",
+  name: "PanInfo",
   data() {
     return {
 
@@ -43,14 +38,13 @@ export default {
     console.log (this.$store.state.navIndex);
   },
     components: {
-    HonestHeader,
-    HonestFooter,
-    HonestIndex,
-    DetailsContainer,
+    // HonestHeader,
+    // HonestFooter,
+    // HonestIndex,
+    // DetailsContainer,
 
     PanHeader,
     PanIndex,
-
 
     PanIndexAbove,
     PanIndexUnder

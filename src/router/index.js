@@ -9,8 +9,8 @@ import BgIndex from '../views/websiteBackground/BgIndex.vue'
 import BgEmployee from '../views/websiteBackground/BgEmployee.vue'
 
 //テストページ 下path name component 設定
-//次はsrc\views\panReception\PanIndex.vue
-import PanIndex from '../views/panReception/PanIndex.vue'
+//次はsrc\views\panReception\PanInfo.vue
+import PanInfo from '../views/panReception/PanInfo.vue'
 
 Vue.use(Router)
 
@@ -60,11 +60,11 @@ export default new Router({
       name: 'Service',
       component: HonestInfo
     },
-    // PanIndex
+    // PanInfo
     {
-      path: '/panIndex',
-      name: 'PanIndex',
-      component: PanIndex
+      path: '/panInfo',
+      name: 'PanInfo',
+      component: PanInfo
     }
   ]
 })

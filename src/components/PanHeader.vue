@@ -1,6 +1,6 @@
 <template>
   <div id="pan-header">
-    <el-image class="logo" :src="require('@/assets/image/log_400x400.jpeg')"></el-image>
+    <el-image class="logo" :src="require('@/assets/image/usagi/log_400x400.jpeg')"></el-image>
     <el-menu
       :default-active="navActiveIndex"
       class="el-menu-demo main-menu"
