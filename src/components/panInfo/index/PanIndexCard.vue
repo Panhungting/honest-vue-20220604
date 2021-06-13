@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <div class="card-block" v-for="o in 4" :key="o">
+    <div class="card-block" v-for="o in 3" :key="o">
       <div class="card-img">
         <div class="cover">
           <p>日々進化する環境の中で、ウサギの飼いましょう！</p>

@@ -14,6 +14,7 @@
       </el-main>
       <el-footer>
         <!-- <honest-footer></honest-footer> -->
+        <pan-footer></pan-footer>
       </el-footer>
     </el-container>
   </div>
@@ -24,6 +25,7 @@ import PanHeader     from "../../components/panInfo/PanHeader";
 import PanIndex      from "../../components/panInfo/index/PanIndexContainer";
 import PanIndexAbove from "../../components/panInfo/index/PanIndexAbove";
 import PanIndexUnder from "../../components/panInfo/index/PanIndexUnder";
+import PanFooter     from '../../components/panInfo/PanFooter.vue';
 
 export default {
   name: "PanInfo",
@@ -41,7 +43,8 @@ export default {
     PanIndex,
 
     PanIndexAbove,
-    PanIndexUnder
+    PanIndexUnder,
+    PanFooter
   },
 }
 </script>
