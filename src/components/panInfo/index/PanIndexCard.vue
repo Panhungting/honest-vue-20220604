@@ -6,14 +6,14 @@
           <p>日々進化する環境の中で、ウサギの飼いましょう！</p>
         </div>
         <!-- ループどうやって使いますか -->
-        <el-image :src="require('@/assets/image/usagi/usagi-0-1.jpg')" fit="cover "></el-image>
+        <el-image :src="require('@/assets/image/usagi/usagi-0-1.jpg')" fit="cover"></el-image>
       </div>
       <div class="card-nav">
         <!-- ループどうやって使いますか -->
         <!-- 
         <p>会社概要</p>
         -->
-        <router-link :to="{ name: 'Company' }">
+        <router-link :to="{ name: 'PanInfo' }">
           <p class="link">詳細を確認する</p>
         </router-link>
       </div>

@@ -65,6 +65,18 @@ export default new Router({
       path: '/panInfo',
       name: 'PanInfo',
       component: PanInfo
-    }
+    },
+    // PanInfo-Features
+    {
+      path: '/panInfo/features',
+      name: 'Features',
+      component: PanInfo
+    },
+    // PanInfo-About
+    {
+      path: '/panInfo/about',
+      name: 'About',
+      component: PanInfo
+    },
   ]
 })
