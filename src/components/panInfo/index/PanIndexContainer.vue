@@ -2,6 +2,7 @@
   <div>
     <el-carousel :interval="3000" arrow="hover">
       <el-carousel-item v-for="carousel in carouselSrc" :key="carousel">
+        <!-- TODOイメージ図を調整する-->
         <el-image :src="carousel"></el-image>
       </el-carousel-item>
     </el-carousel>
@@ -31,8 +32,8 @@
       </el-collapse-item>
     </el-collapse>
     <!--
-    <honest-card></honest-card> 
     -->
+    <pan-index-card></pan-index-card> 
   </div>
 </template>
 <style scope>
@@ -52,7 +53,7 @@ el-carousel {
 }
 </style>
 <script>
-// import HonestCard from "../honestInfo/HonestIndexCard"
+import PanIndexCard from "./PanIndexCard.vue";
 export default {
   name: 'PanIndexContainer',
   data() {
@@ -68,6 +69,7 @@ export default {
     };
   },
   components: {
+    PanIndexCard
     //HonestCard,
   },
 }

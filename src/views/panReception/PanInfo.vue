@@ -20,9 +20,8 @@
 </template>
 
 <script>
-import PanHeader from        "../../components/PanHeader";
-import PanIndex from         "../../components/panInfo/index/PanIndexContainer";
-
+import PanHeader     from "../../components/panInfo/PanHeader";
+import PanIndex      from "../../components/panInfo/index/PanIndexContainer";
 import PanIndexAbove from "../../components/panInfo/index/PanIndexAbove";
 import PanIndexUnder from "../../components/panInfo/index/PanIndexUnder";
 
@@ -38,11 +37,6 @@ export default {
     console.log (this.$store.state.navIndex);
   },
     components: {
-    // HonestHeader,
-    // HonestFooter,
-    // HonestIndex,
-    // DetailsContainer,
-
     PanHeader,
     PanIndex,
 
