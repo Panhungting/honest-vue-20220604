@@ -5,7 +5,7 @@
 
       <el-container>
         <el-main>
-          <el-table stripe height="100%" width="100%" :data="employeeList">
+          <el-table stripe height="100%" width="100%" :data="employeesList">
             <!-- <el-table-column type="selection" width="55"> </el-table-column> -->
             <el-table-column prop="name" label="姓名" width="120">
             </el-table-column>
@@ -55,14 +55,17 @@ export default {
       mail: "1111111111@aaaaa.com",
     };
     return {
-      employeeList: Array(10).fill(item),
-      // employeeList: [{
+      employeesList: Array(10).fill(item),
+      // employeesList: [{
       //   name: "honest01",
       //   gender: 0,
       //   telephone: "00000000000",
       //   mail: "1111111111@aaaaa.com"
       // }],
     };
+  },
+  beforeCreate() {
+    console.log (this.$route);
   },
   methods: {
   },

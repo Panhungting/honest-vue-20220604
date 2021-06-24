@@ -5,7 +5,7 @@
         <div class="cover">
           <p>日々進化するIT環境の中で、社員の技術力を磨きつつ、お客様のニーズに融合させ、共に発展し続けていける企業を目指します.</p>
         </div>
-        <el-image :src="require('@/assets/image/company.jpg')" fit="cover "></el-image>
+        <el-image :src="require('@/assets/image/company.jpg')"></el-image>
       </div>
       <div class="card-nav">
         <p>会社概要</p>
@@ -42,6 +42,10 @@
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
   display: none;
+}
+.el-image {
+  width: 100%;
+  height: 100%;
 }
 .card-img:hover .cover {
   display: block;
@@ -80,8 +84,8 @@ export default {
   name: 'HonestCard',
   data() {
     return {
-      
-    }
+
+}
   },
   methods: {
     

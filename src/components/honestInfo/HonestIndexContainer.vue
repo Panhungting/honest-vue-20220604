@@ -1,8 +1,8 @@
 <template>
   <div>
-    <el-carousel :interval="3000" arrow="hover">
+    <el-carousel :interval="5000" arrow="hover">
       <el-carousel-item v-for="carousel in carouselSrc" :key="carousel">
-        <el-image :src="carousel"></el-image>
+        <el-image :src="carousel" class="bannerImg"></el-image>
       </el-carousel-item>
     </el-carousel>
     <div class="announce">
@@ -10,7 +10,6 @@
     </div>
     <el-collapse
       v-model="activeCollapse"
-      class="elcollapse"
     >
       <el-collapse-item title="ご挨拶" name="1">
         <div>
@@ -50,13 +49,24 @@
         <div>詳細を確認する</div>
       </el-collapse-item>
     </el-collapse>
+
+    <!-- -->这是滑动显示
+      <div style="width: 100%;" v-for="i in 4" :key="i" class="div01">
+        <div class="title01">事業内容</div>
+        <div class="introduction">業務システム開発、パッケージソフト開発、人材派遣等の事業を展開しております</div>
+      </div>
+
     <honest-card></honest-card>
   </div>
 </template>
 <style scope>
-el-carousel {
-  width: 1200px;
-  height: 400px;
+.el-carousel {
+  width: 100%;
+  /* height: 400px; */
+}
+.bannerImg {
+  width: 100%;
+  height: 100%;
 }
 .announce {
   margin-top: 10px;
@@ -65,8 +75,24 @@ el-carousel {
   text-align: left;
   border: 2px solid red;
 }
-.elcollapse {
+.el-collapse {
   text-align: left;
+}
+
+.title01 {
+  width: 100%;
+  height: 40px;
+}
+.introduction {
+  display: none;
+}
+.div01:hover .introduction {
+  display: block;
+}
+.div01 {
+  text-align: left;
+  border-bottom: 1px solid lightgrey;
+  line-height: 40px;
 }
 </style>
 <script>
@@ -76,9 +102,9 @@ export default {
   data() {
     return {
       carouselSrc: [
-        require("@/assets/image/mainImg01.jpg"),
-        require("@/assets/image/mainImg02.jpg"),
-        require("@/assets/image/mainImg03.jpg"),
+        require("@/assets/image/banner01.jpg"),
+        require("@/assets/image/banner02.jpg"),
+        require("@/assets/image/banner03.jpg"),
       ],
       activeCollapse: "1",
       announce:

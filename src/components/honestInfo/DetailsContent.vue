@@ -1,11 +1,18 @@
 <template>
-  <div>
-    <el-table stripe style="width: 100%" :data="companyData">
+  <div style="display:flex;">
+    <el-table stripe style="width: 70%" :data="companyData">
       <el-table-column prop="title" width="180"></el-table-column>
       <el-table-column prop="content"></el-table-column>
     </el-table>
+    <el-image :src="none" class="detpic"></el-image>
   </div>
 </template>
+<style scoped>
+.detpic {
+  width: 30%;
+  height: auto;
+}
+</style>
 <script>
 export default {
   name: 'DetailsContent',

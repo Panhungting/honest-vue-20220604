@@ -29,17 +29,17 @@ export default new Router({
       path: '/honest',
       name: 'BgIndex',
       component: BgIndex,
-      // meta: {
-      //   requireAuth: true   //需要登录后才能访问的受限资源
-      // }
+      meta: {
+        requireAuth: true   //需要登录后才能访问的受限资源
+      }
     },
     {
       path: '/honest/employee',
       name: 'BgEmployee',
       component: BgEmployee,
-      // meta: {
-      //   requireAuth: true
-      // }
+      meta: {
+        requireAuth: true
+      }
     },
     // 前台
     {
