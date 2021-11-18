@@ -36,7 +36,7 @@ export default {
           },
           {
             title: "資本金",
-            content: "950万円",
+            content: "2000万円",
           },
           {
             title: "所在地",

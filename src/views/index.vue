@@ -84,7 +84,6 @@
 .el-collapse {
   text-align: left;
 }
-
 .title01 {
   width: 100%;
   height: 40px;
@@ -103,7 +102,7 @@
 </style>
 
 <script>
-import Card from "../../components/honestInfo/IndexCard";
+import Card from "../components/IndexCard";
 export default {
   name: "Index",
   data() {

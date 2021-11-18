@@ -11,7 +11,7 @@
 
 </style>
 <script>
-import DetailsContainer from "../../components/honestInfo/DetailsContainer";
+import DetailsContainer from "../components/DetailsContainer";
 export default {
   name: "HonestInfo",
   data() {

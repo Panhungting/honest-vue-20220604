@@ -72,7 +72,7 @@
   bottom: 10px;
 }
 .cover p {
-  font-size: 10px;
+  font-size: 12px;
   color: #fff;
   text-align: left;
   padding: 10px;
