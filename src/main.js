@@ -22,7 +22,10 @@ new Vue({
   template: '<App/>',
 })
 
-// todo
+/**
+ * 后台登陆判断
+ * todo
+ */
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (store.state.token) {   //判断是否已经登录

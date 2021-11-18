@@ -1,55 +1,44 @@
 <template>
-  <div id="heading-banner">
-    <div class="banner-box">
-      <div class="des">{{ items[currentNav].itemName }}</div>
+  <div id="banner">
+    <div class="banner-left">
+      <div class="name">
+        <div class="bannerName">{{ items[index].bannerName }}</div>
+        <div class="englishName">{{ items[index].englishName }}</div>
+      </div>
       <el-image
-        class="banner-img"
-        :src="items[currentNav].bannerUrl"
+        class="banner-right"
+        :src="items[index].bannerUrl"
       ></el-image>
     </div>
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item
-        v-for="(breadcrumb, i) in items[currentNav].breadcrumb"
-        :key="i"
-        :to="{ name: breadcrumb.pathName }"
-        >{{ breadcrumb.name }}</el-breadcrumb-item
-      >
-      <!-- <el-breadcrumb-item>会社概要</el-breadcrumb-item> -->
-    </el-breadcrumb>
-    <h1>占个位{{this.$store.state.navIndex}}={{currentNav}}</h1>
   </div>
 </template>
 <style scoped>
-.banner-box {
+.banner-left {
   width: 100%;
-  height: 200px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  background-color: #4c70db;
 }
-.des {
+.name {
   float: left;
-  width: 20%;
-  height: 100%;
-  background-color: pink;
+  width: 20%;  
   font-size: 30px;
-  text-align: center;
-  line-height: 200px;
+  color:rgba(255, 255, 255, 0.877);
+  box-sizing: border-box;
 }
-.banner-img {
+.name div {
+  width: 100%;
+}
+.englishName {
+  font-size: 18px;
+}
+.banner-right {
   width: 80%;
   height: 100%;
 }
-.el-breadcrumb {
-  margin: 10px 0 10px;
-}
-h1 {
-  width: 100%;
-  height: 150px;
-  font-size: 50px;
-  background-color: lightblue;
-  text-align: center;
-  line-height: 150px;
-  margin: 0;
-}
 </style>
+
 <script>
 export default {
   name: "DetailsBanner",
@@ -57,28 +46,35 @@ export default {
     return {
       items: [
         {
-          itemName: "会社概要",
-          bannerUrl: require("@/assets/image/mainImg01.jpg"),
-          breadcrumb: [
-            { name: "ホーム", pathName: "HonestInfo" },
-            { name: "会社案内", pathName: "" },
-            { name: "会社概要", pathName: "" },
-          ],
+          bannerName: "会社概要",
+          englishName: "Company",
+          bannerUrl: require("@/assets/image/company.jpg"),
         },
         {
-          itemName: "事業内容",
-          bannerUrl: require("@/assets/image/mainImg02.jpg"),
-          breadcrumb: [
-            { name: "ホーム", pathName: "HonestInfo" },
-            { name: "事業内容", pathName: "" },
-            { name: "事業内容", pathName: "" },
-          ],
+          bannerName: "事業内容",
+          englishName: "Service",
+          bannerUrl: require("@/assets/image/service.jpg"),
+        },
+        {
+          bannerName: "採用情報",
+          englishName: "Recruit",
+          bannerUrl: require("@/assets/image/recruit.jpg"),
+        },
+        {
+          bannerName: "個人情報保護方針",
+          englishName: "Privacy Policy",
+          bannerUrl: require("@/assets/image/privacy.jpg"),
+        },
+        {
+          bannerName: "お問い合わせ",
+          englishName: "Contact",
+          bannerUrl: require("@/assets/image/contactus.jpg"),
         },
       ],
     };
   },
   computed: {
-    currentNav() {
+    index() {
       return this.$store.state.navIndex - 1;
     }
   },

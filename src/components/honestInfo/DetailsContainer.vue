@@ -1,12 +1,12 @@
 <template>
   <div style="height: 100%">
     <details-banner></details-banner>
-    <details-content></details-content>
+    <table-content></table-content>
   </div>
 </template>
 <script>
 import DetailsBanner from "./DetailsBanner";
-import DetailsContent from "./DetailsContent";
+import TableContent from "./TableContent";
 export default {
   name: "DetailsContainer",
   data() {
@@ -14,7 +14,7 @@ export default {
   },
   components: {
     DetailsBanner,
-    DetailsContent,
+    TableContent,
   },
 };
 </script>

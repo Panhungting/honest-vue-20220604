@@ -1,44 +1,29 @@
 <template>
   <div id="app">
-    <router-view />
-    <el-backtop></el-backtop>
+    <div class="main-container">
+      <el-header>
+        <honest-header></honest-header>
+      </el-header>
+      <router-view />
+      <el-backtop></el-backtop>
+    </div>
+    <el-footer>
+      <honest-footer></honest-footer>
+    </el-footer>
   </div>
 </template>
 
 <script>
+import HonestHeader from "../src/components/HonestHeader";
+import HonestFooter from "../src/components/HonestFooter";
+
 export default {
   name: "App",
-  created() {
-    this.getCurrentPath();
+  components: {
+    HonestHeader,
+    HonestFooter,
   },
-  watch: {
-    $route() {
-      this.getCurrentPath();
-    },
-  },
-  methods: {
-    getCurrentPath() {
-      console.log (this.$route.path);
-      this.setNavIndex(this.$route.path);
-    },
-    setNavIndex(currentPath) {
-      switch (currentPath) {
-        case "/honestInfo":
-          this.$store.commit('newNavIndex', 0);
-          break;
-        case "/company":
-          this.$store.commit('newNavIndex', 1);
-          break;
-          case "/service":
-          this.$store.commit('newNavIndex', 2);
-          break;
-        default:
-          this.$store.commit('newNavIndex', 0);
-      }
-    },
-
-  },
-};
+}
 </script>
 
 <style>
@@ -48,8 +33,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
-  height: 100%;  /* backtop父元素要设置高度 */
+  margin: 10px auto;
+  height: 100%; /* backtop父元素要设置高度 */
+}
+.main-container {
+  max-width: 1300px;
+  min-width: 800px;
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
@@ -57,6 +47,12 @@ a {
 .router-link-active {
   text-decoration: none;
 }
-::-webkit-scrollbar {display:none}
+::-webkit-scrollbar {
+  display: none;
+}
+.el-footer {
+  margin: 0;
+  padding: 0;
+}
 </style>
 

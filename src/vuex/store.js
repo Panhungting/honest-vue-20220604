@@ -14,7 +14,7 @@ const store = new Vuex.Store({
   },
   // 官方推荐的修改
   mutations: {
-    newNavIndex(state, index) {
+    setNavIndex(state, index) {
       state.navIndex = index;
     }
   }
