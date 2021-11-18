@@ -1,9 +1,11 @@
 <template>
   <div id="honest-header">
-    <el-image
-      class="logo"
-      :src="require('@/assets/image/logo2.jpg')"
-    ></el-image>
+    <router-link :to="{ name: 'Index' }">
+      <el-image
+        class="logo"
+        :src="require('@/assets/image/logo2.jpg')"
+      ></el-image>
+    </router-link>
     <el-menu
       :default-active="activeIndex"
       class="el-menu-demo main-menu"
@@ -55,7 +57,7 @@
   top: 10px;
 }
 .main-menu {
-  width: 100%;
+  /* width: 100%; */
   height: 60px;
   margin-left: 40px;
 }
@@ -81,8 +83,7 @@ export default {
       activeIndex: "1",
     };
   },
-
-created() {
+  created() {
     this.getCurrentPath();
   },
   watch: {
@@ -92,7 +93,6 @@ created() {
   },
   methods: {
     getCurrentPath() {
-      console.log(this.$route.path);
       this.setNavIndex(this.$route.path);
     },
     setNavIndex(currentPath) {
@@ -109,15 +109,15 @@ created() {
           this.$store.commit("setNavIndex", 2);
           this.activeIndex = "3";
           break;
-          case "/recruit":
+        case "/recruit":
           this.$store.commit("setNavIndex", 3);
           this.activeIndex = "4";
           break;
-          case "/privacy":
+        case "/privacy":
           this.$store.commit("setNavIndex", 4);
           this.activeIndex = "5";
           break;
-          case "/contact":
+        case "/contact":
           this.$store.commit("setNavIndex", 5);
           this.activeIndex = "6";
           break;
@@ -126,10 +126,6 @@ created() {
           this.activeIndex = "1";
       }
     },
-    // handleSelect(key, keyPath) {
-    //   console.log(key+"----"+keyPath);
-    // }
   },
- 
 };
 </script>
