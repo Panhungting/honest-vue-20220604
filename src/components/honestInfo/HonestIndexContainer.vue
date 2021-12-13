@@ -103,8 +103,8 @@ export default {
     return {
       carouselSrc: [
         require("@/assets/image/banner01.jpg"),
-        require("@/assets/image/banner02.jpg"),
-        require("@/assets/image/banner03.jpg"),
+        require("@/assets/image/mainImg02.jpg"),
+        require("@/assets/image/mainImg03.jpg"),
       ],
       activeCollapse: "1",
       announce:
