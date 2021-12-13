@@ -1,61 +1,49 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from '../views/temIndex.vue'  // 临时主页
-import HonestInfo from '../views/siteReception/HonestInfo.vue'
-
-import BgLogin from '../views/websiteBackground/BgLogin.vue'
-import BgIndex from '../views/websiteBackground/BgIndex.vue'
-import BgEmployee from '../views/websiteBackground/BgEmployee.vue'
-
+import Index from '../views/index.vue'
+import Details from '../views/Details.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  mode: 'hash',  // 默认值，带/#/
+  mode: 'history',  // 默认值，hash带#
   routes: [
+    // ホームページ
     {
       path: '/',
-      name: 'Index',  
+      name: 'Index',
       component: Index
     },
-    // 后台
-    {
-      path: '/honest/login',
-      name: 'BgLogin',
-      component: BgLogin
-    },
-    {
-      path: '/honest',
-      name: 'BgIndex',
-      component: BgIndex,
-      meta: {
-        requireAuth: true   //需要登录后才能访问的受限资源
-      }
-    },
-    {
-      path: '/honest/employee',
-      name: 'BgEmployee',
-      component: BgEmployee,
-      meta: {
-        requireAuth: true
-      }
-    },
-    // 前台
-    {
-      path: '/honestInfo',
-      name: 'HonestInfo',
-      component: HonestInfo
-    },
+    // 会社案内
     {
       path: '/company',
       name: 'Company',
-      component: HonestInfo
+      component: Details
     },
+    // 事業内容
     {
       path: '/service',
       name: 'Service',
-      component: HonestInfo
+      component: Details
+    },
+    // 採用情報
+    {
+      path: '/recruit',
+      name: 'Recruit',
+      component: Details
+    },
+    // 個人情報保護方針
+    {
+      path: '/privacy',
+      name: 'Privacy',
+      component: Details
+    },
+    // お問い合わせ
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Details
     },
   ]
 })
