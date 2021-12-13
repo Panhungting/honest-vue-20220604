@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Index from '../views/index.vue'
+import Index from '../views/Index.vue'
 import Details from '../views/Details.vue'
+import ErrorPage from '../views/ErrorPage.vue'
 
 Vue.use(Router)
 
@@ -45,5 +46,15 @@ export default new Router({
       name: 'Contact',
       component: Details
     },
+    // 404
+    {
+      path: '/404',
+      name: '404',
+      component: ErrorPage
+    },
+    {
+      path: '*', // 此处需特别注意至于最底部
+      redirect: '/404'
+    }
   ]
 })

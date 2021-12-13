@@ -10,6 +10,12 @@
     <el-footer>
       <honest-footer></honest-footer>
     </el-footer>
+
+    <!-- <div class="main-container">
+      <router-view />
+      <el-backtop></el-backtop>
+    </div> -->
+    
   </div>
 </template>
 

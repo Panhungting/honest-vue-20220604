@@ -138,7 +138,7 @@
 </style>
 
 <script>
-import { indexData } from "../data/data";
+import { indexData } from "../common/data";
 export default {
   name: "Index",
   data() {

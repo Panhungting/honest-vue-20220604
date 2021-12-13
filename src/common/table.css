@@ -1,0 +1,28 @@
+.el-image {
+  margin-top: 60px;
+  width: 400px;
+  height: 460px;
+}
+.table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 60px auto;
+  text-align: left;
+}
+.table tr {
+  border-top: 1px #ccc solid;
+  height: 60px;
+}
+.table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+.table tr:last-child {
+  border-bottom: 1px #ccc solid;
+}
+.table th {
+  width: 200px;
+  padding-left: 30px;
+}
+.table td {
+  padding: 20px 20px 20px 0;
+}
